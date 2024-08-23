@@ -13,11 +13,11 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Mobile {
+public class Mobile implements Comparable<Mobile> {
 
     private int id;
     private String name;
-        private int prize;
+    private int prize;
     private String manufacturePlace;
     private Date manufactureDate;
 
@@ -53,5 +53,10 @@ public class Mobile {
         mobileList.add(new Mobile(20, "HTC U12+", 799, "Taiwan", new Date(1527811200000L)));  // 01-06-2018
 
         return mobileList;
+    }
+
+    @Override
+    public int compareTo(Mobile o) {
+        return Integer.compare(this.prize,o.prize);
     }
 }
