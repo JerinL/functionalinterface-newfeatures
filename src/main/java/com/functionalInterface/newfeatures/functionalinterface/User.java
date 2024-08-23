@@ -16,10 +16,11 @@ public  class User  {
 
     private String name;
     private int age;
+    private String gender;
     private String mail;
 
 
-    public void printUser(User user){
+    public static void printUser(User user){
         System.out.println(user.toString());
     }
 
@@ -31,12 +32,12 @@ public  class User  {
         }
     }
 
-    public List<User> userList(){
-        List<User> userList = Arrays.asList( new User("jerin",23,"test@gmail.com"),
-                new User("sujith",24,"test@gmail.com"),
-                new User("anto",25,"test@gmail.com"),
-                new User("batrick",20,"test@gmail.com"),
-                new User("ashwanth",12,"test@gmail.com"));
+    public static List<User> userList(){
+        List<User> userList = Arrays.asList( new User("jerin",23,"male","test@gmail.com"),
+                new User("sujith",3,"female","test@gmail.com"),
+                new User("anto",14,"female","test@gmail.com"),
+                new User("batrick",18,"male","test@gmail.com"),
+                new User("ashwanth",12,"female","test@gmail.com"));
         return userList;
     }
 
